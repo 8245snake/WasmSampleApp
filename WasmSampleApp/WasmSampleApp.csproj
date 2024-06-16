@@ -18,11 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <UpToDateCheckInput Remove="Counter.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="Counter.razor" />
+    <ProjectReference Include="..\WasmSampleApp.Shared\WasmSampleApp.Shared.csproj" />
   </ItemGroup>
 
 </Project>
