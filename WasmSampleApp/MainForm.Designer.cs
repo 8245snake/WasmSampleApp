@@ -35,7 +35,7 @@ namespace WasmSampleApp
             webView = new BlazorWebView();
             SuspendLayout();
             // 
-            // blazorWebView1
+            // webView
             // 
             webView.Dock = DockStyle.Fill;
             webView.Location = new Point(0, 0);
@@ -44,14 +44,15 @@ namespace WasmSampleApp
             webView.TabIndex = 0;
             webView.Text = "blazorWebView1";
             // 
-            // Form1
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(webView);
             Name = "MainForm";
-            Text = "Form1";
+            Text = "WasmSampleApp";
+            WindowState = FormWindowState.Maximized;
             ResumeLayout(false);
         }
 

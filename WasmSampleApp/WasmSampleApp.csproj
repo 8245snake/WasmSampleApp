@@ -1,24 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net7.0-windows</TargetFramework>
-    <Nullable>enable</Nullable>
-    <UseWindowsForms>true</UseWindowsForms>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net7.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.20" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebView.WindowsForms" Version="7.0.101" />
-  </ItemGroup>
+	<ItemGroup>
+		<Compile Remove="wwwroot\css\**" />
+		<Content Remove="wwwroot\css\**" />
+		<EmbeddedResource Remove="wwwroot\css\**" />
+		<None Remove="wwwroot\css\**" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\css\bootstrap\" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.20" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebView.WindowsForms" Version="7.0.101" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\WasmSampleApp.Shared\WasmSampleApp.Shared.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\WasmSampleApp.Shared\WasmSampleApp.Shared.csproj" />
+	</ItemGroup>
 
 </Project>

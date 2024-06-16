@@ -16,8 +16,6 @@ namespace WasmSampleApp
             webView.Services = CreateService();
             webView.HostPage = "wwwroot\\index.html";
             webView.RootComponents.Add<App>("#app");
-            webView.RootComponents.Add<HeadOutlet>("head::after");
-            
         }
 
         private ServiceProvider CreateService()
